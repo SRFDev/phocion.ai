@@ -1,0 +1,366 @@
+---
+const title = "Phocion — AI Data Security Gateway";
+const description =
+  "Phocion is a model-agnostic AI data-security gateway: real-time PII/PHI masking and semantic injection screening, self-hosted in your VPC.";
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="icon" type="image/png" href="/favicon-32.png" sizes="32x32" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@500;600&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="wrap header-inner">
+        <a href="/" class="wordmark" aria-label="Phocion home">
+          <img class="mark" src="/phocion_logo_440x440.png" width="40" height="40" alt="" />
+          <span class="wordmark-text">PHO<span class="cio">CIO</span>N</span>
+        </a>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div class="wrap">
+          <p class="eyebrow">AI Data Security Gateway</p>
+          <h1>Every prompt, screened before it leaves your network. Every response, screened before it touches your infrastructure.</h1>
+          <p class="lede">
+            Introducing Phocion. A model-agnostic proxy that sits between your
+            applications and any LLM provider — masking sensitive data in real
+            time and screening for prompt injection, without changing how your
+            team calls the model.
+          </p>
+          <div class="status-badge">
+            <span class="dot" aria-hidden="true"></span>
+            In active development, running technical pilots
+          </div>
+        </div>
+      </section>
+
+      <section class="problem">
+        <div class="wrap">
+          <h2>The problem</h2>
+          <p>
+            Teams are wiring LLMs directly into products and internal tools faster
+            than their data-governance policies can keep up. Customer PII, PHI, and
+            proprietary business data routinely end up in prompts sent to
+            third-party model providers — with no consistent layer checking what
+            goes out, or what comes back.
+          </p>
+        </div>
+      </section>
+
+      <section class="how">
+        <div class="wrap">
+          <h2>How it works</h2>
+          <div class="grid">
+            <div class="card">
+              <h3>Drop-in proxy</h3>
+              <p>Model-agnostic — sits in front of whichever LLM provider you already use, no application rewrite required.</p>
+            </div>
+            <div class="card">
+              <h3>Real-time masking</h3>
+              <p>PII and PHI are detected and masked in-flight, before a request reaches the model.</p>
+            </div>
+            <div class="card">
+              <h3>Injection screening</h3>
+              <p>Every request is semantically screened for prompt-injection attempts before it reaches the model.</p>
+            </div>
+            <div class="card">
+              <h3>Self-hosted / VPC</h3>
+              <p>Runs inside your own infrastructure — sensitive traffic never has to leave your network boundary.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="credibility">
+        <div class="wrap">
+          <h2>What's real, right now</h2>
+          <div class="metrics">
+            <div class="metric">
+              <span class="metric-value qualitative">Low-latency</span>
+              <span class="metric-label">Gateway overhead by design — no benchmarked figure published yet</span>
+            </div>
+          </div>
+          <ul class="notes">
+            <li>Runs as an inline proxy alongside your existing infrastructure, not a round-trip to a third-party scanning service.</li>
+            <li>Designed to <strong>reduce token overhead</strong> via <strong>semantic caching</strong> — savings are directional, not yet a measured, published figure.</li>
+            <li>Built with SOC2/HIPAA-oriented controls in mind. Phocion is not currently SOC2 certified.</li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="honest-status">
+        <div class="wrap">
+          <h2>Status</h2>
+          <p>
+            Phocion is in active development, running technical pilots. This page
+            exists so the claims made about it elsewhere have something real to
+            point to.
+          </p>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="wrap">
+        <span class="wordmark-text small">PHO<span class="cio">CIO</span>N</span>
+        <span class="copyright">&copy; 2026 SRF Development, Inc., maker of Phocion.</span>
+      </div>
+    </footer>
+
+    <style is:global>
+      :root {
+        --color-primary: #040f49;
+        --color-primary-deep: #030a33;
+        --color-secondary: #c3cee3;
+        --color-secondary-muted: #8b98b8;
+        --color-accent: #00e8ff;
+        --color-card: #0a1a5e;
+        --color-border: rgba(195, 206, 227, 0.18);
+
+        --font-head: "Space Grotesk", sans-serif;
+        --font-body: "Inter", sans-serif;
+        --font-mono: "JetBrains Mono", monospace;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      html {
+        font-size: 19px;
+      }
+
+      html,
+      body {
+        margin: 0;
+        padding: 0;
+      }
+
+      body {
+        background: var(--color-primary);
+        color: var(--color-secondary);
+        font-family: var(--font-body);
+        line-height: 1.6;
+        -webkit-font-smoothing: antialiased;
+      }
+
+      h1,
+      h2,
+      h3 {
+        font-family: var(--font-head);
+        color: #f4f7fc;
+        margin: 0 0 0.6em;
+        line-height: 1.15;
+      }
+
+      p {
+        margin: 0 0 1em;
+      }
+
+      .wrap {
+        max-width: 1140px;
+        margin: 0 auto;
+        padding: 0 1.5rem;
+      }
+
+      .site-header {
+        border-bottom: 1px solid var(--color-border);
+      }
+
+      .header-inner {
+        display: flex;
+        align-items: center;
+        padding-top: 1.25rem;
+        padding-bottom: 1.25rem;
+      }
+
+      .wordmark {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.5rem;
+        text-decoration: none;
+      }
+
+      .wordmark-text {
+        font-family: var(--font-head);
+        font-weight: 600;
+        font-size: 1.6rem;
+        letter-spacing: 0.06em;
+        color: #f4f7fc;
+      }
+
+      .wordmark-text.small {
+        font-size: 1.2rem;
+      }
+
+      .cio {
+        color: var(--color-accent);
+      }
+
+      .eyebrow {
+        font-family: var(--font-mono);
+        color: var(--color-accent);
+        text-transform: uppercase;
+        letter-spacing: 0.12em;
+        font-size: 1rem;
+        margin-bottom: 1.25rem;
+      }
+
+      .hero {
+        padding: 6rem 0 5rem;
+      }
+
+      .hero h1 {
+        font-size: clamp(2.75rem, 5vw, 4rem);
+        max-width: 34ch;
+      }
+
+      .lede {
+        max-width: 58ch;
+        font-size: 1.4rem;
+        color: var(--color-secondary);
+      }
+
+      .status-badge {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.5rem;
+        border: 1px solid var(--color-border);
+        border-radius: 999px;
+        padding: 0.5rem 1.1rem;
+        font-size: 1.05rem;
+        color: var(--color-secondary);
+        margin-top: 1.25rem;
+      }
+
+      .dot {
+        width: 9px;
+        height: 9px;
+        border-radius: 50%;
+        background: var(--color-accent);
+        box-shadow: 0 0 8px var(--color-accent);
+      }
+
+      section {
+        padding: 4.5rem 0;
+        border-top: 1px solid var(--color-border);
+      }
+
+      .grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+        gap: 1.5rem;
+        margin-top: 2rem;
+      }
+
+      .card {
+        background: var(--color-card);
+        border: 1px solid var(--color-border);
+        border-radius: 10px;
+        padding: 1.75rem;
+      }
+
+      .card h3 {
+        font-size: 1.3rem;
+        margin-bottom: 0.6rem;
+      }
+
+      .card p {
+        color: var(--color-secondary-muted);
+        font-size: 1.1rem;
+        margin: 0;
+      }
+
+      .metrics {
+        display: flex;
+        gap: 2rem;
+        margin: 2rem 0;
+      }
+
+      .metric {
+        display: flex;
+        flex-direction: column;
+        gap: 0.35rem;
+      }
+
+      .metric-value {
+        font-family: var(--font-mono);
+        font-weight: 600;
+        font-size: 3.5rem;
+        color: var(--color-accent);
+      }
+
+      .metric-value.qualitative {
+        font-family: var(--font-head);
+        font-size: 2.5rem;
+      }
+
+      .metric-unit {
+        font-size: 1.6rem;
+        margin-left: 0.15rem;
+      }
+
+      .metric-label {
+        font-size: 1.05rem;
+        color: var(--color-secondary-muted);
+      }
+
+      .notes {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+        gap: 0.65rem;
+      }
+
+      .notes li {
+        color: var(--color-secondary-muted);
+        font-size: 1.1rem;
+        padding-left: 1.2rem;
+        position: relative;
+      }
+
+      .notes li::before {
+        content: "—";
+        position: absolute;
+        left: 0;
+        color: var(--color-secondary-muted);
+      }
+
+      .site-footer {
+        border-top: 1px solid var(--color-border);
+        padding: 2rem 0;
+      }
+
+      .site-footer .wrap {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 0.75rem;
+      }
+
+      .copyright {
+        font-size: 1rem;
+        color: var(--color-secondary-muted);
+      }
+    </style>
+  </body>
+</html>
