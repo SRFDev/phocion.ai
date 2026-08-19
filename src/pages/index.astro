@@ -117,13 +117,19 @@ const description =
     </main>
 
     <footer class="site-footer">
-      <div class="wrap">
-        <span class="wordmark-text small">PHO<span class="cio">CIO</span>N</span>
-        <span class="footer-meta">
-          <span class="copyright">&copy; 2026 SRF Development, Inc., maker of Phocion.</span>
-          <span class="footer-sep" aria-hidden="true">·</span>
+      <div class="wrap footer-row">
+        <div class="footer-item">
+          <span class="wordmark-text small">PHO<span class="cio">CIO</span>N</span>
+        </div>
+        <span class="footer-divider" aria-hidden="true"></span>
+        <div class="footer-item footer-contact">
+          <span class="footer-label">CONTACT</span>
           <a class="contact-email" href="mailto:info@phocion.ai">info@phocion.ai</a>
-        </span>
+        </div>
+        <span class="footer-divider" aria-hidden="true"></span>
+        <div class="footer-item">
+          <span class="copyright">&copy; 2026 SRF Development, Inc., maker of Phocion.</span>
+        </div>
       </div>
     </footer>
 
@@ -349,23 +355,58 @@ const description =
       }
 
       .site-footer {
-        border-top: 1px solid var(--color-border);
-        padding: 2rem 0;
+        position: relative;
+        padding: 1.75rem 0;
       }
 
-      .site-footer .wrap {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        flex-wrap: wrap;
-        gap: 0.75rem;
+      .site-footer::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 1px;
+        background: linear-gradient(
+          90deg,
+          transparent,
+          var(--color-accent) 50%,
+          transparent
+        );
+        opacity: 0.6;
+        box-shadow: 0 0 12px 1px var(--color-accent);
       }
 
-      .footer-meta {
+      .footer-row {
         display: flex;
         align-items: center;
-        gap: 0.75rem;
         flex-wrap: wrap;
+        gap: 1.5rem;
+      }
+
+      .footer-item {
+        display: flex;
+        flex-direction: column;
+        gap: 0.25rem;
+      }
+
+      .footer-contact {
+        flex-direction: column;
+      }
+
+      .footer-divider {
+        display: inline-block;
+        align-self: stretch;
+        width: 1px;
+        background: var(--color-border);
+      }
+
+      .footer-label {
+        font-family: var(--font-mono);
+        color: var(--color-secondary-muted);
+        text-transform: uppercase;
+        letter-spacing: 0.12em;
+        font-size: 0.7rem;
+        opacity: 0.8;
       }
 
       .copyright {
@@ -373,16 +414,12 @@ const description =
         color: var(--color-secondary-muted);
       }
 
-      .footer-sep {
-        color: var(--color-secondary-muted);
-        opacity: 0.5;
-      }
-
       .contact-email {
         font-size: 1rem;
         color: var(--color-secondary-muted);
         text-decoration: none;
         border-bottom: 1px solid var(--color-border);
+        width: fit-content;
       }
 
       .contact-email:hover {
