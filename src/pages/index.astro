@@ -128,7 +128,7 @@ const description =
         </div>
         <span class="footer-divider" aria-hidden="true"></span>
         <div class="footer-item">
-          <span class="copyright">&copy; 2026 SRF Development, Inc., maker of Phocion.</span>
+          <span class="copyright">&copy; 2026 <a class="copyright-link" href="https://srf.dev">SRF Development, Inc.</a>, maker of Phocion.</span>
         </div>
       </div>
     </footer>
@@ -440,6 +440,17 @@ const description =
       }
 
       .contact-email:hover {
+        color: var(--color-accent);
+        border-bottom-color: var(--color-accent);
+      }
+
+      .copyright-link {
+        color: inherit;
+        text-decoration: none;
+        border-bottom: 1px solid var(--color-border);
+      }
+
+      .copyright-link:hover {
         color: var(--color-accent);
         border-bottom-color: var(--color-accent);
       }
